@@ -102,7 +102,7 @@ pub enum RetryAfter {
 impl RetryAfter {
     /// Wait time calculated from current operating system time.
     pub fn wait_time(&self) -> Duration {
-        self.wait_time_with_time_provider(|| Utc::now().offset())
+        self.wait_time_with_time_provider(|| Utc::now().fixed_offset())
     }
 
     fn wait_time_with_time_provider(&self, get_time: impl FnOnce() -> DateTime<FixedOffset>) -> Duration {
