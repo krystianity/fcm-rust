@@ -19,7 +19,7 @@ Add the following to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
-fcm = { git = "https://github.com/rj76/fcm-rust.git" }
+fcm = { git = "https://github.com/krystianity/fcm-rust.git" }
 ```
 
 Optionally, add the credentials described in the [Credentials](#credentials)
